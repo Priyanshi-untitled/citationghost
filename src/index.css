@@ -1,0 +1,49 @@
+:root {
+  --paper: #f4efe4;
+  --paper2: #ece5d0;
+  --paper3: #e0d5b8;
+  --ink: #1c1409;
+  --ink2: #3d3120;
+  --ink3: #7a6a4a;
+  --ink4: #a89878;
+  --red: #b5271e;
+  --red-bg: rgba(181,39,30,0.08);
+  --amber: #c46b0a;
+  --amber-bg: rgba(196,107,10,0.09);
+  --green: #1a6b3a;
+  --green-bg: rgba(26,107,58,0.08);
+  --blue: #1e3a6e;
+  --blue-bg: rgba(30,58,110,0.07);
+  --rule: rgba(28,20,9,0.12);
+  --shadow: rgba(28,20,9,0.18);
+  --bg: #141008;
+
+  --f-display: 'DM Serif Display', serif;
+  --f-body: 'Libre Baskerville', serif;
+  --f-serif: 'Instrument Serif', serif;
+  --f-mono: 'Martian Mono', monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#3d3120;border-radius:0}
+
+@keyframes reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+@keyframes stamp{0%{transform:scale(4) rotate(-20deg);opacity:0}65%{transform:scale(0.92) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(-2deg);opacity:1}}
+@keyframes scanline{0%{top:-2px;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:100%;opacity:0}}
+@keyframes blink{0%,100%{opacity:1}49%{opacity:1}50%{opacity:0}99%{opacity:0}}
+@keyframes tearUp{0%{transform:translateY(0)}100%{transform:translateY(-110%)}}
+@keyframes tearDown{0%{transform:translateY(0)}100%{transform:translateY(110%)}}
+@keyframes ghostPop{0%{transform:scale(0) translateY(40px);opacity:0}70%{transform:scale(1.1) translateY(-5px);opacity:1}100%{transform:scale(1) translateY(0);opacity:1}}

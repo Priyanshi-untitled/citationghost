@@ -1,0 +1,17 @@
+.tear-wrap{position:fixed;inset:0;z-index:999;overflow:hidden;background:var(--bg);display:flex;align-items:center;justify-content:center}
+.tear-top{position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(160deg,var(--paper) 0%,var(--paper2) 100%);display:flex;flex-direction:column;justify-content:flex-end;z-index:2;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+.tear-top.go{animation:tearUp 0.7s cubic-bezier(0.4,0,1,1) 0.3s both}
+.tear-bot{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(160deg,var(--paper2) 0%,var(--paper3) 100%);display:flex;flex-direction:column;justify-content:flex-start;z-index:2;box-shadow:0 -8px 40px rgba(0,0,0,0.5)}
+.tear-bot.go{animation:tearDown 0.7s cubic-bezier(0.4,0,1,1) 0.3s both}
+.tear-content-top{padding:1.5rem 3rem 2.5rem}
+.tear-content-bot{padding:2.5rem 3rem 1.5rem}
+.tear-brand{font-family:var(--f-mono);font-size:0.62rem;letter-spacing:0.2em;color:var(--ink4);text-transform:uppercase;margin-bottom:0.4rem}
+.tear-filename{font-family:var(--f-display);font-size:1.5rem;font-style:italic;color:var(--ink);margin-bottom:1.2rem}
+.tear-lines{display:flex;flex-direction:column;gap:7px}
+.tear-line{height:11px;background:rgba(28,20,9,0.09);border-radius:1px}
+.tear-edge-top{height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16'%3E%3Cpath d='M0,0 Q4,16 8,8 Q12,0 16,12 Q20,16 24,6 Q28,0 32,0' fill='%23141008'/%3E%3C/svg%3E") repeat-x bottom;background-size:32px 16px;flex-shrink:0}
+.tear-edge-bot{height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16'%3E%3Cpath d='M0,16 Q4,0 8,8 Q12,16 16,4 Q20,0 24,10 Q28,16 32,16' fill='%23141008'/%3E%3C/svg%3E") repeat-x top;background-size:32px 16px;flex-shrink:0}
+.ghost-center{position:absolute;z-index:3;text-align:center;opacity:0;pointer-events:none;transition:opacity 0.5s ease 0.8s,transform 0.6s cubic-bezier(0.22,1,0.36,1) 0.8s;transform:scale(0.7) translateY(20px)}
+.ghost-center.show{opacity:1;transform:scale(1) translateY(0)}
+.gc-ghost{font-size:5rem;display:block;animation:float 2s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(255,255,255,0.15))}
+.gc-text{font-family:var(--f-mono);font-size:0.85rem;color:rgba(244,239,228,0.6);margin-top:0.8rem;letter-spacing:0.12em;text-transform:uppercase}
