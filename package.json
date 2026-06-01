@@ -14,7 +14,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "node node_modules/react-scripts/bin/react-scripts.js build"
   },
   "browserslist": {
     "production": [">0.2%"],
